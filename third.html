@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful Login Page</title>
+  <style>
+    :root {
+      --primary-color: #ee0979;
+      --secondary-color: #ff6a00;
+      --bg-light: white;
+      --bg-dark: #1e1e2f;
+      --input-bg-light: #f1f1f1;
+      --input-bg-dark: #2c2c3e;
+      --text-light: #333;
+      --text-dark: #f0f0f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      transition: background 0.5s ease;
+    }
+
+    .login-container {
+      background: var(--bg-light);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 320px;
+      text-align: center;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode .login-container {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      color: var(--primary-color);
+    }
+
+    body.dark-mode .login-container h2 {
+      color: var(--secondary-color);
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      background: var(--input-bg-light);
+      transition: all 0.3s ease;
+      color: var(--text-light);
+    }
+
+    body.dark-mode .login-container input {
+      background: var(--input-bg-dark);
+      color: var(--text-dark);
+    }
+
+    .login-container input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    }
+
+    .login-container p {
+      margin-top: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    body.dark-mode .login-container p {
+      color: #aaa;
+    }
+
+    .login-container a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    body.dark-mode .login-container a {
+      color: var(--secondary-color);
+    }
+
+    .toggle-btn {
+      margin-bottom: 15px;
+      background: none;
+      border: 2px solid var(--primary-color);
+      padding: 6px 12px;
+      border-radius: 8px;
+      color: var(--primary-color);
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode .toggle-btn {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    .toggle-btn:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Sign In</button>
+    </form>
+    <p>Don't have an account? <a href="#">Register</a></p>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
