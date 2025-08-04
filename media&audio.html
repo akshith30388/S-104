@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <title>Media Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(255, 98, 0);
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .navbar img {
+            height: 100px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration:dotted;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+ 
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header><h1>Welcome to my media page</h1></header>
-    <nav>
+    
+    <nav class="navbar">
         <div>
-            <img src="image.jpg"/>
+            <img src="image1.jpg" alt="Logo">
         </div>
-        <div></div>
-        <div></div>
+
+        <div class="title">
+            Learning Management System
+        </div>
+
+        <div>
+            <a href="https://newerp.kluniversity.in/" target="_blank">Home</a>
+            <a href="https://www.kluniversity.in/#" target="_blank">About Us</a>
+            <a href="https://lms.kluniversity.in/login/index.php" target="_blank">Sign/Signup</a>
+        </div>
     </nav>
-    <audio rel=""></audio>
 </body>
 </html>
